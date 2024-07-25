@@ -30,7 +30,6 @@ const Detail = ({ showDetailBox, expense, refresher }) => {
         const response = await api.delete(`api/delete_expense/${expense.id}/`)
         refresher();
         showDetailBox();
-        console.log(response)
     }
     catch (e) {
       console.log(e)

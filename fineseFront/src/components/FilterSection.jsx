@@ -65,7 +65,6 @@ const FilterSection = ({setExpenseList}) => {
 
   const fetchfilteredList = async () => {
     try {
-        console.log(filters)
         const response = await api.post("api/filtered_list/",filters)
         setExpenseList(response.data)
         
