@@ -6,13 +6,18 @@ import { useEffect, useState, useRef } from "react";
 import api from "../api";
 const StatusHeader = ({goal  , fetchGoal, editMode , changeMode}) => {
   const inputRef = useRef(null);
-  const editRef = useRef(editMode);
   const [value, setValue] = useState();
   const [formData, setformData] = useState({ income: 0, saving: 0 });
   const tickRef = useRef();
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setformData({ ...formData, [name]: Number(parseFloat(value).toFixed(2)) });
+    let newValue = Number(parseFloat(value).toFixed(2));
+    if (name === "saving") {
+      console.log("new value done")
+      if (newValue < 0) newValue = 0;
+      if (newValue > 100) newValue = 100;
+    }
+    setformData({ ...formData, [name]: newValue });
   };
 
 
@@ -28,9 +33,10 @@ const StatusHeader = ({goal  , fetchGoal, editMode , changeMode}) => {
   };
   const updateGoal = async () => {
     try {
+      setformData(formData)
       const response = await api.patch(`api/update_goal/${goal.id}/`, formData);
-      changeMode();
       fetchGoal();
+      changeMode();
     } catch (e) {
       console.log(e);
     }

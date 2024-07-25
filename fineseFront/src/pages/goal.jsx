@@ -36,7 +36,12 @@ const Goal = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setformData({ ...formData, [name]: Number(parseFloat(value).toFixed(2)) });
+    let newValue = Number(parseFloat(value).toFixed(2));
+    if (name === "saving") {
+      if (newValue < 0) newValue = 0;
+      if (newValue > 100) newValue = 100;
+    }
+    setformData({ ...formData, [name]: newValue});
   };
 
   const handleSubmit = async (e) => {
