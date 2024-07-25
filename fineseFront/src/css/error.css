@@ -1,0 +1,19 @@
+.error-card , .error-card-expense{
+    width: 90%;
+    border:1px solid rgb(238, 28, 28);
+    border-radius: 10px;
+    font-size: .8rem;
+    color:red;
+    margin:10px auto;
+    padding:10px;
+    display: flex;
+    align-items: center;
+}
+.error-card i ,.error-card-expense i {
+    padding:5px;
+}
+.error-card-expense {
+    border:1px solid rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    
+}

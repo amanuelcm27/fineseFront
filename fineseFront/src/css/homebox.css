@@ -1,0 +1,146 @@
+.box-container {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.notify {
+  width: 20%;
+  margin: 10px auto;
+  background-color: #9664ff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-top: 20px;
+  animation: popUpSlide 1s ease-in-out 0s;
+}
+.notify i {
+  padding: 10px;
+}
+@keyframes popUpSlide {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.card-container {
+  width: 50%;
+  background-color: #9664ff;
+  margin: 50px auto;
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+  border-top: 1px solid;
+  box-shadow: 1px 1px 5px #9664ff;
+}
+.close-box {
+  text-align: right;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.expense-form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.expense-form-container label {
+  padding: 5px;
+}
+.expense-name,
+.expense-amount,
+.expense-category {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-left: 10px solid #c24af5;
+}
+.expense-amount,
+.expense-category {
+  width: 50%;
+}
+
+.category-btn,
+.add-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #9664ff;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+.category-btn:hover,
+.add-btn:hover {
+  background-color: #a783f5;
+  cursor: pointer;
+}
+.expense-desc {
+  width: 70%;
+  height: 100px;
+  outline: none;
+  padding: 5px;
+  resize: none;
+  border-left: 10px solid #c24af5;
+}
+.add-btn {
+  margin-left: auto;
+  margin-top: 10px;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.category-card {
+  display: inline-flex;
+  width: 50%;
+  padding: 10px;
+  background-color: white;
+  border-left: 10px solid #c24af5;
+  color: #141414;
+  border-bottom: 1px solid #c24af5;
+}
+.category-card i {
+  margin-left: auto;
+}
+.category-card i:hover {
+  color: #9664ff;
+  cursor: pointer;
+}
+.category-list {
+  position: relative;
+  color: black;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #9664ff;
+}
+.category-list ul {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: white;
+  width: 50%;
+  height: 100px;
+  padding: 10px;
+  margin-top: 5px;
+  border-left: 10px solid #c24af5;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+.category-list li:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+}

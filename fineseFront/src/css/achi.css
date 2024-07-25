@@ -1,0 +1,66 @@
+.achi-container,
+.sug-container {
+  width: 80%;
+  margin: auto;
+}
+.achi-card-container {
+  width: 100%;
+  margin: 20px;
+}
+.achi-card,
+.achi-card2,
+.achi-card3 {
+  width: 70%;
+  height: 100px;
+  margin: 10px auto;
+  border: 12px solid #9664ff;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.achi-card:hover,
+.achi-card2:hover,
+.achi-card3:hover {
+  transition: all 0.5s ease-in;
+  transform: translateX(10px);
+}
+.achi-card2 {
+  border: 12px solid #ff0000;
+  display: flex;
+  flex-direction: column;
+
+}
+.achi-card3 {
+  border: 12px solid #00ff00;
+}
+.achi-card2 i {
+  padding: 5px;
+  color: #ff0000;
+}
+.achi-card3 i {
+  padding: 5px;
+  color: #00ff00;
+}
+.highlight {
+  font-weight: bold;
+  padding: 0px 10px;
+}
+.empty-result-box {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+  border: 1px solid #9664ff;
+  padding:20px;
+  border-radius: 10px;
+  font-size: 1.7rem;
+}
+.empty-result-box:hover {
+  background-color: #9664ff;
+  cursor: pointer;
+  color: white;
+}
+.empty-result-box a:hover {
+  color: rgb(252, 252, 252);
+}

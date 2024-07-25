@@ -1,0 +1,94 @@
+.detail-container {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-card-container {
+  width: 50%;
+  height: auto;
+  background-color: #9664ff;
+  border-radius: 10px;
+}
+.detail-heading {
+  text-align: right;
+  padding: 10px;
+  color: white;
+}
+.detail-heading i {
+  padding: 5px;
+  cursor: pointer;
+}
+ 
+.detail-card {
+  margin: 10px;
+}
+.detail-item,
+.detail-item-desc {
+  width: 50%;
+  background-color: white;
+  display: flex;
+  padding: 20px;
+  margin: 10px;
+}
+.detail-item:hover,
+.detail-item-desc:hover {
+  border-left: 10px solid #c24af5;
+  cursor: pointer;
+}
+.detail-item i {
+  margin-right: 10px;
+}
+.detail-item-desc {
+  width: 80%;
+  height: 100px;
+  margin-right: 10px;
+  overflow-y: scroll;
+}
+
+.detail-item-desc i {
+  margin-right: 10px;
+}
+
+.detail-item input {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 5px;
+
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #c24af5;
+}
+.detail-item-desc textarea {
+  width: 90%;
+  outline: none;
+  padding: 5px;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #c24af5;
+}
+.delete-box {
+  color: white;
+  padding: 10px;
+  border: 1px solid;
+  margin: 20px;
+  border-radius: 10px;
+}
+.delete-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  border: 1px solid rgb(255, 4, 4);
+  color: rgb(255, 0, 0);
+  border-radius: 5px;
+}
+.delete-btn:hover {
+  background-color: red;
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --font-family: "Julius Sans One", sans-serif;
+  --color: #9664ff;
+}
+
+.user-box {
+  width: 40%;
+  height: auto;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .user-box {
+    width: 60%;
+  }
+  .user-btn {
+    margin-right: auto;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .user-box {
+    width: 80%;
+  } 
+  .user-btn {
+    margin:auto;
+    width: 40%;
+  }
+}
+.box-heading {
+  margin: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family:"Julius Sans One", sans-serif !important;
+}
+
+.login-form {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family) !important;
+}
+.username,.password {
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid #9664ff;
+  outline-color: #9664ff;
+
+}
+
+.user-btn {
+  background-color: var(--color);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: white;
+  margin:10px;
+  margin-left: auto;
+}
+.user-btn:hover {
+  background-color: #8a5dea;
+  cursor: pointer;
+}
+.link {
+  color:#9664ff;
+  padding:5px;
+}
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+

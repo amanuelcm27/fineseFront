@@ -1,0 +1,1 @@
+A Finance Tracking App for your daily expenses that you conduct. Gives timely data about your 
