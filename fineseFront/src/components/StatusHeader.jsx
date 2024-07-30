@@ -13,7 +13,6 @@ const StatusHeader = ({goal  , fetchGoal, editMode , changeMode}) => {
     const { name, value } = e.target;
     let newValue = Number(parseFloat(value).toFixed(2));
     if (name === "saving") {
-      console.log("new value done")
       if (newValue < 0) newValue = 0;
       if (newValue > 100) newValue = 100;
     }
