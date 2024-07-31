@@ -42,7 +42,7 @@ const Suggestion = ({ goal }) => {
             {suggestion?.top_3.map((item) => (
               <div key={item.category_name} className="top3-box">
                 <span>{item.category_name} </span>
-                <span className="top-exp">${item.total_amount}</span>
+                <span className="top-exp">{item.total_amount}</span>
               </div>
             ))}
             <div className="suggestion">
@@ -63,7 +63,7 @@ const Suggestion = ({ goal }) => {
               <div key={item.category_name} className="top3-box">
                 <span>{item.category_name} </span>
                 <span className="top-exp">
-                  ${formatNumber(item.total_amount)} -{" "}
+                  {formatNumber(item.total_amount)} -{" "}
                   {formatNumber(item.reduction_needed)}
                 </span>
               </div>

@@ -78,7 +78,7 @@ const StatusHeader = ({goal  , fetchGoal, editMode , changeMode}) => {
         ) : (
           <>
             <div onClick={changeMode} className="income-box">
-              <span>${goal?.income}</span>
+              <span>{goal?.income}</span>
             </div>
             <div onClick={changeMode} className="saving-box">
               <span>{goal?.saving}%</span>

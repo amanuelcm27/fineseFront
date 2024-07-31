@@ -26,7 +26,7 @@ const Achievement = ({ goal }) => {
               <span>
                 From your current monthly Income of
                 <span className="highlight">
-                  ${formatNumber(monthlyStat.current_income)}
+                  {formatNumber(monthlyStat.current_income)}
                 </span>
                 you are spending
                 <span className="highlight">
@@ -40,7 +40,7 @@ const Achievement = ({ goal }) => {
                   <i className="fa-solid fa-circle-check"></i>
                   Congratulations. You can currently meet your goal of saving
                   <span className="highlight">
-                    ${formatNumber(monthlyStat.saving)}
+                    {formatNumber(monthlyStat.saving)}
                   </span>
                 </span>
               </div>
@@ -50,7 +50,7 @@ const Achievement = ({ goal }) => {
                   <i className="fa-solid fa-circle-xmark"></i>
                   Unfortunately you can't currently save
                   <span className="highlight">
-                    ${formatNumber(monthlyStat.saving)}
+                    {formatNumber(monthlyStat.saving)}
                   </span>
                   <div>
                     <a href="#sug" style={{ color: "red" }}>

@@ -68,7 +68,7 @@ const Home = () => {
           <BoxHeading text="This month you have spent"></BoxHeading>
           <div className="home-box-expense">
 
-            {loading  ? <img src="loading.gif"></img>:<span>${formatNumber(thisMonthExpense)}</span>}
+            {loading  ? <img src="loading.gif"></img>:<span>{formatNumber(thisMonthExpense)}</span>}
           </div>
         </div>
         <div className="list-heading">

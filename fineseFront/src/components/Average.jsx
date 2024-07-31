@@ -50,7 +50,7 @@ const Average = ({goal}) => {
             <span>Average Daily Expense</span>
           </div>
           <div className="avg-amt">
-            <span>${formatNumber(average ? average.avg_daily : 0)}</span>
+            <span>{formatNumber(average ? average.avg_daily : 0)}</span>
           </div>
         </div>
         <div className="avg-box">
@@ -58,7 +58,7 @@ const Average = ({goal}) => {
             <span>Average Weekly Expense</span>
           </div>
           <div className="avg-amt">
-            <span>${formatNumber(average ? average.avg_weekly : 0)}</span>
+            <span>{formatNumber(average ? average.avg_weekly : 0)}</span>
           </div>
         </div>
         <div className="avg-box">
@@ -66,7 +66,7 @@ const Average = ({goal}) => {
             <span>Average Monthly Expense</span>
           </div>
           <div className="avg-amt">
-            <span>${formatNumber(average ? average.avg_monthly : 0)}</span>
+            <span>{formatNumber(average ? average.avg_monthly : 0)}</span>
           </div>
         </div>
         <div className="avg-box">
@@ -74,7 +74,7 @@ const Average = ({goal}) => {
             <span>Total Yearly Expense</span>
           </div>
           <div className="avg-amt">
-            <span>${formatNumber(average ? average.yearly_expense : 0)}</span>
+            <span>{formatNumber(average ? average.yearly_expense : 0)}</span>
           </div>
         </div>
       </div>
