@@ -89,7 +89,7 @@ const Home = () => {
                 <div key={expense.id} onClick={()=> {setExpense(expense),showDetailBox()}} className="expense-box">
                   <span>{formatDate(expense.date_created)}</span>
                   <span>{expense.name}</span>
-                  <span>${formatNumber (expense.amount)}</span>
+                  <span>{formatNumber (expense.amount)}</span>
                 </div>
               )): 
               <div className="empty-box">
