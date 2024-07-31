@@ -12,13 +12,14 @@ import Home from "./pages/home";
 import Stats from "./pages/stats";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./utils/PrivateRoute";
-import { SpeedInsights } from '@vercel/speed-insights/react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <>
-            <SpeedInsights/>
-
+      <SpeedInsights />
+      <Analytics />
       <Router>
         <AuthProvider>
           <Routes>
