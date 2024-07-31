@@ -12,10 +12,13 @@ import Home from "./pages/home";
 import Stats from "./pages/stats";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./utils/PrivateRoute";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   return (
     <>
+            <SpeedInsights/>
+
       <Router>
         <AuthProvider>
           <Routes>
