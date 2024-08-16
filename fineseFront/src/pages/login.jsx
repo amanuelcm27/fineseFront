@@ -19,6 +19,7 @@ const Login = () => {
     password: "",
   });
   const [error, setError] = useState();
+  const [loading , setLoading] = useState(false)
   const [showError, setShowError] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,11 +34,14 @@ const Login = () => {
 
     return true;
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (validateForm()) {
-      loginUser(formData.username.trim(), formData.password.trim());
+      await loginUser(formData.username.trim(), formData.password.trim());
+      setLoading(false);
     } else {
+      setLoading(false);
       setShowError(true);
     }
   };
@@ -72,7 +76,9 @@ const Login = () => {
               className="password"
               type="password"
             ></input>
+            {loading ?<button type="button" className="user-btn"><img  width='20px' height='20px' src='loading.gif'/> </button>:
             <UserButton text="Login"></UserButton>
+          }
             <span>
               Haven't registered yet ?
               <Link to="/register">

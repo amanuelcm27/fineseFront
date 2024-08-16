@@ -21,6 +21,7 @@ const Home = () => {
   const [thisMonthExpense , setthisMonthExpense] = useState("")
   const [loading , setLoading] = useState(false)
   const [expense,setExpense ] = useState();
+  
   const showExpenseBox = () => {
     setexpenseBox(!expenseBox);
   };

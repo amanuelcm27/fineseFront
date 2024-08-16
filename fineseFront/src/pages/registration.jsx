@@ -4,11 +4,11 @@ import BoxHeading from "../components/BoxHeading";
 import UserButton from "../components/UserButton";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorCard from "../components/ErrorCard";
-import {useEffect, useContext, useState } from "react";
+import { useEffect, useContext, useState } from "react";
 import api from "../api";
 import AuthContext from "../context/AuthContext";
 const Register = () => {
-  const {user, setIsFirstTime ,loginUser } = useContext(AuthContext);
+  const { user, setIsFirstTime, loginUser } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -16,6 +16,8 @@ const Register = () => {
   });
   const [error, setError] = useState();
   const [showError, setShowError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
   useEffect(() => {
     if (user) {
@@ -75,10 +77,10 @@ const Register = () => {
         return null;
       }
       setIsFirstTime(true);
-      loginUser(formData.username,formData.password,true)
+      loginUser(formData.username, formData.password, true);
       return response.data;
     } catch (error) {
-      console.log(error)
+      console.log(error);
       setError("An error occurred during registration.");
       setShowError(true);
       return null;
@@ -87,10 +89,13 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (validateForm()) {
-      register();
+      await register();
+      setLoading(false);
     } else {
       setShowError(true);
+      setLoading(false);
     }
   };
   return (
@@ -125,7 +130,14 @@ const Register = () => {
             name="confirm"
             type="password"
           ></input>
-          <UserButton text="Sign Up"></UserButton>
+          {loading ? (
+            <button type="button" className="user-btn">
+              <img width="20px" height="20px" src="loading.gif" />{" "}
+            </button>
+          ) : (
+            <UserButton text="Sign Up"></UserButton>
+          )}
+
           <span>
             Already Registered ?
             <Link to="/login">
